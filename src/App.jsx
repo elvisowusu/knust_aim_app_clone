@@ -1,9 +1,9 @@
-import HomeScreen from "./components/homeScreen/HomeScreen";
+import { Dashboard } from "./components/dashboard/Dashboard";
 
 function App() {
   return (
     <div>
-      <HomeScreen />
+      <Dashboard/>
     </div>
   );
 }
