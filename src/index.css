@@ -1,0 +1,12 @@
+
+
+/* Path: src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .inputField{
+        @apply w-full my-[0.7rem] py-[0.36rem] px-[0.8rem] placeholder:text-sm placeholder:text-[#9c9aa6] rounded-[0.3rem] outline-none border border-[#d6d7d9];
+    }
+}
