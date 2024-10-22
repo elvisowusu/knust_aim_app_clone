@@ -1,7 +1,11 @@
-
+import { DashBody } from "./DashBody";
+import { NavBar } from "./NavBar";
 
 export const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <div>
+      <NavBar />
+      <DashBody />
+    </div>
+  );
+};
