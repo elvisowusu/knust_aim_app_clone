@@ -1,11 +1,11 @@
 import { DashBody } from "./DashBody";
 import { Footer } from "./Footer";
-import { NavBar } from "./NavBar";
+import { Header } from "./Header";
 
 export const Dashboard = () => {
   return (
     <div className="">
-      <NavBar />
+      <Header />
       <DashBody />
       <Footer />
     </div>
