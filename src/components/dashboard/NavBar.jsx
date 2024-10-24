@@ -31,7 +31,7 @@ export const NavBar = () => {
         className="fixed z-20 opacity-30 bg-slate-600
        left-0 right-0 h-full"
       ></div>
-      <nav className="fixed z-30 pt-[1.23rem] bg-white w-[16rem] h-full pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll">
+      <nav className="fixed z-30 pt-[1.23rem] bg-white w-[16rem] h-full pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container">
         <div className="mb-[5rem]">
           <h1 className="text-[0.7rem] mb-[0.9rem] pl-[1.5rem] font-semibold text-[#9ea9ad] ">
             NAVIGATION
