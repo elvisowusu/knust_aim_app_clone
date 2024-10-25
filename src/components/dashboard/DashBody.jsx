@@ -20,11 +20,3 @@ export const DashBody = () => {
     </div>
   );
 };
-
-{
-  /* <div className="bg-red-600 h-[15.5rem] p-4 rounded-[0.2rem] ">
-<img className="h-[3rem] w-[3rem]" src={biometric} alt="" />
-<h1 className="mt-[1.4rem] mb-[0.8rem] text-[#007427] font-semibold text-lg">Status Checker</h1>
-<p className="text-[0.9rem] line-clamp-[140%]">Discover </p>
-</div> */
-}

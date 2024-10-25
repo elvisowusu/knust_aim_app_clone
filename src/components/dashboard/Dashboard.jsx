@@ -1,13 +1,14 @@
 import { DashBody } from "./DashBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { NavBar } from "./NavBar";
+import { Bar, NavBar } from "./NavBar";
 
 export const Dashboard = () => {
   return (
     <div className=" h-[100vh] overflow-x-clip">
       <NavBar />
-      <div className="lg:ml-[16rem]">
+      <Bar/>
+      <div className="md:ml-[5rem] lg:ml-[16rem]">
         <Header />
         <DashBody />
         <Footer />
