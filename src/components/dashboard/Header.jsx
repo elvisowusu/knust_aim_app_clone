@@ -14,7 +14,7 @@ export const Header = () => {
         <FaArrowRightLong className="w-[1.5rem] h-[1.5rem]" />
       </button>
       <button className="flex items-center px-[1.1rem] gap-3 h-full md:bg-[#455358]">
-        <img className="h-[2rem] w-[2rem] rounded-full" src={profile} alt="" />
+        <img className="h-[2.3rem] w-[2.3rem] rounded-full" src={profile} alt="" />
         <p className="hidden xl:block text-white text-sm">Elvis Owusu</p>
       </button>
     </header>

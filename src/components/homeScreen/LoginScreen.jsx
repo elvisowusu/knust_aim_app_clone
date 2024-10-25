@@ -1,31 +1,10 @@
 import { useState } from "react";
 import knustLogo from "/src/assets/knust logo.png";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { LoginCredentials } from "../../utils/LoginCredentials";
 
 export const LoginScreen = () => {
-  // Use an object to track visibility state for each password field
   const [visibleFields, setVisibleFields] = useState({});
-
-  const loginCredentials = [
-    {
-      id: "username",
-      label: "Username",
-      type: "text",
-      placeholder: "eg. username",
-    },
-    {
-      id: "password",
-      label: "Password",
-      type: "password",
-      placeholder: "Enter password",
-    },
-    {
-      id: "studentId",
-      label: "Student ID",
-      type: "password",
-      placeholder: "eg. 00000000",
-    },
-  ];
 
   const togglePasswordVisibility = (fieldId) => {
     setVisibleFields((prev) => ({
@@ -44,7 +23,7 @@ export const LoginScreen = () => {
         Login
       </p>
       <form className="flex flex-col items-start w-full px-[1.5rem]" action="">
-        {loginCredentials.map(({ id, label, type, placeholder }) => {
+        {LoginCredentials.map(({ id, label, type, placeholder }) => {
           return (
             <>
               <label className=" text-sm mt-[0.1rem] sm:mt-0" htmlFor="">
