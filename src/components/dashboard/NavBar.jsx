@@ -1,10 +1,11 @@
 import { NavItems, OtherServices } from "../../utils/NavItems_Services";
 import brandLogo from "../../assets/brandLogo.png";
-export const NavBar = () => {
+export const NavBar = ({setClick, click}) => {
   return (
     <nav className="w-[16rem] lg:static">
       <div
-        className="fixed md:hidden z-20 opacity-30 bg-slate-600
+        onClick={!click}
+        className="fixed right-0 w-full md:hidden z-20 opacity-30 bg-slate-600
        left-0 h-[100vh]"
       ></div>
       <div className="fixed z-30 bg-white w-[16rem] h-[100vh] pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container shadow-xl md:shadow-none">
