@@ -5,11 +5,13 @@ import { NavBar } from "./NavBar";
 
 export const Dashboard = () => {
   return (
-    <div className="">
-      <NavBar/>
-      <Header />
-      <DashBody />
-      <Footer />
+    <div className=" h-[100vh] overflow-x-clip">
+      <NavBar />
+      <div className="md:ml-[16rem]">
+        <Header />
+        <DashBody />
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -1,15 +1,20 @@
 import { NavItems, OtherServices } from "../../utils/NavItems_Services";
-
+import brandLogo from "../../assets/brandLogo.png";
 export const NavBar = () => {
   return (
-    <>
+    <nav className="w-[16rem] md:static">
       <div
-        className="fixed z-20 opacity-30 bg-slate-600
-       left-0 right-0 h-[100vh]"
+        className="fixed md:hidden z-20 opacity-30 bg-slate-600
+       left-0 h-[100vh]"
       ></div>
-      <nav className="fixed z-30 pt-[1.23rem] bg-white w-[16rem] h-[100vh] pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container">
+      <div className="fixed z-30 bg-white w-[16rem] h-[100vh] pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container shadow-xl md:shadow-none">
         <div className="mb-[5rem]">
-          <h1 className="text-[0.7rem] mb-[0.9rem] pl-[1.5rem] font-semibold text-[#9ea9ad] ">
+          <img
+            src={brandLogo}
+            alt=""
+            className="fixed hidden md:block h-[4.4rem] w-[16rem] pr-[0.05rem]"
+          />
+          <h1 className="text-[0.7rem] md:mt-[5rem] pt-[1.23rem] mb-[0.9rem] pl-[1.5rem] font-semibold text-[#9ea9ad] ">
             NAVIGATION
           </h1>
           {NavItems.map(({ icon, name }) => {
@@ -38,7 +43,7 @@ export const NavBar = () => {
             );
           })}
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 };
