@@ -47,3 +47,42 @@ export const NavBar = () => {
     </nav>
   );
 };
+
+
+
+
+
+export const Bar = () => {
+  return (
+<div className="fixed z-30 bg-white w-[16rem] h-[100vh] pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container shadow-xl md:shadow-none">
+        <div className="mb-[5rem]">
+          <img
+            src={brandLogo}
+            alt=""
+            className="fixed hidden md:block h-[4.4rem] w-[16rem] pr-[0.05rem]"
+          />
+          {NavItems.map(({ icon}) => {
+            return (
+              <>
+                <button className="pl-[2rem] flex gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer focus:bg-green-100 focus:border-r-[0.25rem] border-green-700 hover:bg-green-100">
+                  <img src={icon} alt="" />
+                </button>
+              </>
+            );
+          })}
+        </div>
+        <div className="mb-4">
+          {OtherServices.map(({ icon}) => {
+            return (
+              <>
+                <button className="pl-[2rem] flex gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer focus:bg-green-100 focus:border-r-[0.25rem] border-green-700 hover:bg-green-100">
+                  <img src={icon} alt="" />
+                </button>
+              </>
+            );
+          })}
+        </div>
+      </div>
+  )
+}
+

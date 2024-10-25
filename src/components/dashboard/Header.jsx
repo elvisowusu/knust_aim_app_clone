@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export const Header = () => {
   return (
-    <header className="fixed flex flex-row justify-between items-center w-full md:pl-[16.5rem] right-0 z-20 px-6 h-[4.4rem] bg-black overflow-hidden">
+    <header className="fixed flex flex-row justify-between items-center w-full lg:pl-[16.5rem] right-0 z-20 px-6 h-[4.4rem] bg-black overflow-hidden">
       <img
         className="absolute -z-10 right-0 w-full left-0 top-0 opacity-45"
         src={campus}
