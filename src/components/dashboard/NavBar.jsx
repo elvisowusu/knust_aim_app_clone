@@ -1,6 +1,6 @@
 import { NavItems, OtherServices } from "../../utils/NavItems_Services";
 import brandLogo from "../../assets/brandLogo.png";
-export const NavBar = ({setClick, click}) => {
+export const NavBar = ({ setClick, click }) => {
   return (
     <nav className="w-[16rem] lg:static">
       <div

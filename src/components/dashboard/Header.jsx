@@ -11,7 +11,7 @@ export const Header = ({setClick, click}) => {
         alt=" "
       />
       <button onClick={()=>{setClick(!click)}} className="text-white">
-        {!click?<FaArrowRightLong className="w-[1.5rem] h-[1.5rem] lg:hidden" />:<p className="lg:hidden">Hello</p>}
+        {!click?<FaArrowRightLong className="w-[1.5rem] h-[1.5rem] lg:hidden" />:<p className={` ${click?"lg:hidden":''}`}>Hello</p>}
       </button>
       <button className="flex items-center px-[1.1rem] gap-3 h-full md:bg-[#455358]">
         <img className="h-[2.3rem] w-[2.3rem] rounded-full" src={profile} alt="" />
