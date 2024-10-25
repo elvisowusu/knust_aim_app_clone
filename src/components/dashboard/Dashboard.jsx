@@ -1,28 +1,44 @@
-import { useState } from "react";
+// Dashboard.js
+import { NavigationProvider, useNavigation } from "../../utils/NavigationContext";
 import { DashBody } from "./DashBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Bar, NavBar } from "./NavBar";
 
 export const Dashboard = () => {
-  const [click, setClick] = useState(false);
-
   return (
-    <div className="h-[100vh] overflow-x-clip">
-      {/* Show NavBar on lg screens or when clicked, show Bar only on md screens */}
+    <NavigationProvider>
+      <div className="h-[100vh] overflow-x-clip">
+        <Navigation />
+        <MainContent />
+      </div>
+    </NavigationProvider>
+  );
+};
+
+const Navigation = () => {
+  const { isOpen } = useNavigation();
+  
+  return (
+    <>
       <div className="hidden lg:block">
-        <NavBar setClick={setClick} click={click} />
+        <NavBar />
       </div>
       <div className="block lg:hidden">
-        {click ? <NavBar setClick={setClick} click={click} /> : <Bar />}
+        {isOpen ? <NavBar /> : <Bar />}
       </div>
-      <div
-        className={` ${!click ? `md:ml-[5rem]` : `md:ml-[16rem]`} lg:ml-[16rem]`}
-      >
-        <Header setClick={setClick} click={click} />
-        <DashBody />
-        <Footer />
-      </div>
+    </>
+  );
+};
+
+const MainContent = () => {
+  const { isOpen } = useNavigation();
+  
+  return (
+    <div className={`${!isOpen ? 'md:ml-[5rem]' : 'md:ml-[16rem]'} lg:ml-[16rem]`}>
+      <Header />
+      <DashBody />
+      <Footer />
     </div>
   );
 };
