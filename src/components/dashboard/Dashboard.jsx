@@ -1,9 +1,10 @@
 // Dashboard.js
-import { NavigationProvider, useNavigation } from "../../utils/NavigationContext";
+import { NavigationProvider, UseNavigation } from "../../utils/NavigationContext";
 import { DashBody } from "./DashBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { Bar, NavBar } from "./NavBar";
+import { NavBar } from "./NavBar";
+import { Bar } from "./Bar";
 
 export const Dashboard = () => {
   return (
@@ -17,7 +18,7 @@ export const Dashboard = () => {
 };
 
 const Navigation = () => {
-  const { isOpen } = useNavigation();
+  const { isOpen } = UseNavigation();
   
   return (
     <>
@@ -32,7 +33,7 @@ const Navigation = () => {
 };
 
 const MainContent = () => {
-  const { isOpen } = useNavigation();
+  const { isOpen } = UseNavigation();
   
   return (
     <div className={`${!isOpen ? 'md:ml-[5rem]' : 'md:ml-[16rem]'} lg:ml-[16rem]`}>

@@ -1,10 +1,10 @@
-// NavBar.js
+import PropTypes from "prop-types";
 import { NavItems, OtherServices } from "../../utils/NavItems_Services";
 import brandLogo from "../../assets/brandLogo.png";
-import { useNavigation } from "../../utils/NavigationContext";
+import { UseNavigation } from "../../utils/NavigationContext";
 
 export const NavBar = () => {
-  const { toggleNav } = useNavigation();
+  const { toggleNav } = UseNavigation();
 
   return (
     <nav className="w-[16rem] lg:static">
@@ -26,24 +26,25 @@ const NavigationSection = () => (
     <img
       src={brandLogo}
       alt=""
-      className="fixed hidden md:block h-[4.4rem] w-[16rem] pr-[0.05rem]"
+      className="fixed hidden md:block h-[4.4rem] w-[16rem] pr-[0.05rem] bg-white"
     />
-    <h1 className="text-[0.7rem] md:mt-[5rem] pt-[1.23rem] mb-[0.9rem] pl-[1.5rem] font-semibold text-[#9ea9ad]">
-      NAVIGATION
-    </h1>
-    {NavItems.map(({ icon, name }, index) => (
-      <NavButton key={index} icon={icon} name={name} />
-    ))}
+    <Section title="NAVIGATION" items={NavItems} />
   </div>
 );
 
 const ServicesSection = () => (
   <div className="mb-4">
+    <Section title="OTHER SERVICES" items={OtherServices} />
+  </div>
+);
+
+const Section = ({ title, items }) => (
+  <div className="">
     <h1 className="text-[0.7rem] mb-[0.9rem] pl-[1.5rem] font-semibold text-[#9ea9ad]">
-      OTHER SERVICES
+      {title}
     </h1>
-    {OtherServices.map(({ icon, name }, index) => (
-      <NavButton key={index} icon={icon} name={name} />
+    {items.map((item, index) => (
+      <NavButton key={index} {...item} />
     ))}
   </div>
 );
@@ -54,3 +55,19 @@ const NavButton = ({ icon, name }) => (
     <p className="text-[1rem]">{name}</p>
   </button>
 );
+
+// PropTypes validation
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
+NavButton.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

@@ -2,10 +2,10 @@
 import campus from "../../assets/campus.jpg";
 import profile from "../../assets/profile.jpg";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useNavigation } from "../../utils/NavigationContext";
+import { UseNavigation } from "../../utils/NavigationContext";
 
 export const Header = () => {
-  const { isOpen, toggleNav } = useNavigation();
+  const { isOpen, toggleNav } = UseNavigation();
 
   return (
     <header

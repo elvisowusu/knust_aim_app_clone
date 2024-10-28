@@ -1,10 +1,8 @@
 // NavigationContext.js
-import { createContext, useContext, useReducer } from 'react';
-
-const NavigationContext = createContext();
+import { createContext, useContext, useReducer } from "react";
 
 const NAV_ACTIONS = {
-  TOGGLE: 'TOGGLE_NAV'
+  TOGGLE: "TOGGLE_NAV",
 };
 
 const navReducer = (state, action) => {
@@ -17,8 +15,10 @@ const navReducer = (state, action) => {
 };
 
 const initialState = {
-  isOpen: false
+  isOpen: false,
 };
+
+const NavigationContext = createContext();
 
 export const NavigationProvider = ({ children }) => {
   const [state, dispatch] = useReducer(navReducer, initialState);
@@ -27,7 +27,7 @@ export const NavigationProvider = ({ children }) => {
 
   const value = {
     isOpen: state.isOpen,
-    toggleNav
+    toggleNav,
   };
 
   return (
@@ -37,10 +37,11 @@ export const NavigationProvider = ({ children }) => {
   );
 };
 
-export const useNavigation = () => {
+export const UseNavigation = () => {
   const context = useContext(NavigationContext);
   if (!context) {
-    throw new Error('useNavigation must be used within a NavigationProvider');
+    throw new Error("useNavigation must be used within a NavigationProvider");
   }
+  console.log(context);
   return context;
 };

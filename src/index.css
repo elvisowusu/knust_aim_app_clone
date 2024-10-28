@@ -7,6 +7,9 @@
     .inputField{
         @apply w-full my-[0.7rem] py-[0.36rem] px-[0.8rem] placeholder:text-sm placeholder:text-[#9c9aa6] rounded-[0.3rem] outline-none border border-[#d6d7d9];
     }
+    .navIconsOnly{
+        @apply flex justify-center gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer focus:bg-green-100 focus:border-r-[0.25rem] border-green-700 hover:bg-green-100;
+    }
 }
 /* Base scrollbar styles */
 .scroll-container::-webkit-scrollbar {
