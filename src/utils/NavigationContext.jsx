@@ -42,7 +42,6 @@ export const UseNavigation = () => {
   if (!context) {
     throw new Error("useNavigation must be used within a NavigationProvider");
   }
-  console.log(context);
   return context;
 };
 

@@ -2,7 +2,7 @@ import {
   NavigationProvider,
   UseNavigation,
 } from "../../utils/NavigationContext";
-import { DashBody } from "./DashBody";
+import { DashBody } from "./features/DashBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavBar } from "./NavBar";
@@ -40,7 +40,7 @@ const MainContent = () => {
       className={`${!isOpen ? "md:ml-[5rem]" : "md:ml-[16rem]"} lg:ml-[16rem]`}
     >
       <Header />
-      {/* <DashBody /> */}
+      <DashBody />
       <Footer />
     </div>
   );

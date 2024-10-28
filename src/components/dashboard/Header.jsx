@@ -25,13 +25,13 @@ export const Header = () => {
           <HiMenuAlt2 className="lg:hidden" />
         )}
       </button>
-      <button className="flex items-center px-[1.1rem] gap-3 h-full md:bg-[#455358]">
+      <button className="flex items-center pl-[1.1rem] md:px-[1.1rem] gap-3 h-full md:bg-[#455358]">
         <img
-          className="h-[2.3rem] w-[2.3rem] rounded-full"
+          className="h-[2.1rem] w-[2.1rem] rounded-full"
           src={profile}
           alt=""
         />
-        <p className="hidden xl:block text-white text-sm">Elvis Owusu</p>
+        <p className="hidden xl:block pr-[1.1rem] text-white text-sm">Elvis Owusu</p>
       </button>
     </header>
   );
