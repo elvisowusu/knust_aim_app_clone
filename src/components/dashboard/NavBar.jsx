@@ -13,7 +13,7 @@ export const NavBar = () => {
         className="fixed right-0 w-full md:hidden z-20 opacity-30 bg-slate-600
        left-0 h-[100vh]"
       ></div>
-      <div className="fixed z-30 bg-white w-[16rem] h-[100vh] pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container shadow-xl md:shadow-none">
+      <div className="fixed pt-6 z-30 bg-white w-[16rem] h-[100vh] pr-[0.1rem] flex flex-col justify-between gap-[17rem] overflow-y-scroll scroll-container shadow-xl md:shadow-none">
         <NavigationSection />
         <ServicesSection />
       </div>
@@ -56,7 +56,6 @@ const NavButton = ({ icon, name }) => (
   </button>
 );
 
-// PropTypes validation
 Section.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(

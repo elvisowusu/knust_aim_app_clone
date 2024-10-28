@@ -1,4 +1,4 @@
-// NavigationContext.js
+import PropTypes from "prop-types";
 import { createContext, useContext, useReducer } from "react";
 
 const NAV_ACTIONS = {
@@ -44,4 +44,8 @@ export const UseNavigation = () => {
   }
   console.log(context);
   return context;
+};
+
+NavigationProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

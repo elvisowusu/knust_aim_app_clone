@@ -1,5 +1,7 @@
-// Dashboard.js
-import { NavigationProvider, UseNavigation } from "../../utils/NavigationContext";
+import {
+  NavigationProvider,
+  UseNavigation,
+} from "../../utils/NavigationContext";
 import { DashBody } from "./DashBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -19,26 +21,26 @@ export const Dashboard = () => {
 
 const Navigation = () => {
   const { isOpen } = UseNavigation();
-  
+
   return (
     <>
       <div className="hidden lg:block">
         <NavBar />
       </div>
-      <div className="block lg:hidden">
-        {isOpen ? <NavBar /> : <Bar />}
-      </div>
+      <div className="block lg:hidden">{isOpen ? <NavBar /> : <Bar />}</div>
     </>
   );
 };
 
 const MainContent = () => {
   const { isOpen } = UseNavigation();
-  
+
   return (
-    <div className={`${!isOpen ? 'md:ml-[5rem]' : 'md:ml-[16rem]'} lg:ml-[16rem]`}>
+    <div
+      className={`${!isOpen ? "md:ml-[5rem]" : "md:ml-[16rem]"} lg:ml-[16rem]`}
+    >
       <Header />
-      <DashBody />
+      {/* <DashBody /> */}
       <Footer />
     </div>
   );
