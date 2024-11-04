@@ -4,7 +4,7 @@ import { FaArrowLeftLong, FaCircleCheck } from "react-icons/fa6";
 export const StatusChecker = () => {
   return (
     <div className="mb-[1.2rem] bg-white md:w-[83%]">
-      <section className="flex flex-col border-b-2 border-[#d9f1e1] justify-center items-center bg-[#d9f1e1] w-full h-[9.6rem] ">
+      <section className="flex flex-col border-b-2 border-[#d9f1e1] justify-center items-center bg-[#D9F1E1] w-full h-[9.6rem] ">
         <h1 className="text-[#504e51] text-center text-[1.6rem] px-6 font-medium ">
           ACADEMIC STATUS CHECKER
         </h1>

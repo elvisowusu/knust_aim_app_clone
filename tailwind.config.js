@@ -7,6 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        Montserrat: ['Montserrat', 'sans-serif'],
+        Rubik:['Rubik','sans-serif']
       },
       colors: {
         aimLightGreen: `#dbf2e2`,

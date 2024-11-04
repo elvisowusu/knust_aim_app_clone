@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* Path: src/index.css */
 @tailwind base;
 @tailwind components;
@@ -14,6 +17,29 @@
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-6;
     }
 }
+
+
+
+@layer base{
+    h1,h2,h3{
+        @apply font-semibold font-Montserrat;
+    }
+    p{
+        @apply font-Rubik font-normal;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Base scrollbar styles */
 .scroll-container::-webkit-scrollbar {
     width: 6px;
