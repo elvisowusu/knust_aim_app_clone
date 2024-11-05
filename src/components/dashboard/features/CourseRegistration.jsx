@@ -21,9 +21,9 @@ export const CourseRegistration = () => {
           </div>
         ))}
       </section>
-      <div className="flex flex-col sm:flex-row lg:flex-row gap-[0.5rem] justify-center  w-full items-center h-[4rem] text-center">
+      <div className="flex flex-col sm:flex-row lg:flex-row gap-[0.2rem] justify-center  w-full items-center h-[4rem] text-center">
         <Btn />
-        <button className="border bg-[#13c56b] text-white hover:text-white hover:bg-[#10a75b] hover:border-[#0f9e56] active:bg-[#0f9e56] ease-out transition-all 3s w-fit text-sm py-[0.5rem] px-3 rounded-[0.3rem] border-[#13c56b] flex justify-center items-center">
+        <button className="border bg-[#13c56b] text-white hover:text-white hover:bg-[#10a75b] hover:border-[#0f9e56] active:bg-[#0f9e56] ease-out transition-all 3s w-fit text-sm py-[0.55rem] px-3 rounded-[0.3rem] border-[#13c56b] flex justify-center items-center">
           Proceed to Course Registration
         </button>
       </div>

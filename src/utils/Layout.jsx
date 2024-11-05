@@ -1,8 +1,8 @@
 import { FaArrowLeftLong } from "react-icons/fa6";
-
+import PropTypes from "prop-types";
 export const Btn = () => {
   return (
-    <button className="border text-red-400 hover:text-white hover:bg-red-400 hover:border-none ease-out transition-all 3s w-fit text-sm py-[0.5rem] px-3 rounded-[0.3rem] border-red-400 flex justify-center items-center">
+    <button className="border text-red-400 hover:text-white hover:bg-red-400 hover:border-none ease-out transition-all 3s w-fit text-sm py-[0.55rem] px-3 rounded-[0.3rem] border-red-400 flex justify-center items-center">
       <FaArrowLeftLong size={11} />
       Back to Main Menu
     </button>
@@ -20,4 +20,8 @@ export const Heading = ({ headText }) => {
       <hr className="bg-[#d9f1e1] border-none h-[0.2rem] sm:h-[0.04rem] md:h-[0.01rem] mt-[0.2rem] w-full " />
     </>
   );
+};
+
+Heading.propTypes = {
+  headText: PropTypes.string.isRequired,
 };
