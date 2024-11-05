@@ -6,26 +6,35 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .inputField{
+@layer components {
+    .inputField {
         @apply w-full my-[0.7rem] py-[0.36rem] px-[0.8rem] placeholder:text-sm placeholder:text-[#9c9aa6] rounded-[0.3rem] outline-none border border-[#d6d7d9];
     }
-    .navIconsOnly{
+
+    .navIconsOnly {
         @apply flex justify-center gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer focus:bg-green-100 focus:border-r-[0.25rem] border-green-700 hover:bg-green-100;
     }
-    .grids{
+
+    .grids {
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-6;
     }
 }
 
 
 
-@layer base{
-    h1,h2,h3{
+@layer base {
+
+    h1,
+    h2,
+    h3 {
         @apply font-semibold font-Montserrat;
     }
+
     p{
         @apply font-Rubik font-normal;
+    }
+    button{
+        @apply font-Rubik;
     }
 }
 
@@ -44,7 +53,8 @@
 .scroll-container::-webkit-scrollbar {
     width: 6px;
     position: absolute;
-    opacity: 0;  /* Hidden by default */
+    opacity: 0;
+    /* Hidden by default */
     transition: opacity 0.3s ease;
 }
 
