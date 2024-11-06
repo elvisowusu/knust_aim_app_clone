@@ -2,7 +2,7 @@ import { DashboardItems } from "../../../utils/DashboardItems";
 
 export const MainDashBoard = () => {
   return (
-    <div className="grids">
+    <div className="grids w-full">
       {DashboardItems.map(({ icon, heading, description, index }) => {
         return (
           <div
