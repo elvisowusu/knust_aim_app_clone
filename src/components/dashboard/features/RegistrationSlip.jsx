@@ -1,9 +1,10 @@
-import { IoIosArrowDropdown } from "react-icons/io";
 import { Btn, Layout } from "../../../utils/Layout";
+import { IoIosArrowDown } from "react-icons/io";
 
 export const RegistrationSlip = () => {
   return (
     <Layout
+      style={"w-[98%] h-[32rem]"}
       mainHeadText="REGISTRATION SLIP"
       mainContent={
         <section className="">
@@ -25,16 +26,14 @@ export const RegistrationSlip = () => {
   );
 };
 
-import React from "react";
-
 export const DropMenu = ({ style, clickFunc }) => {
   return (
     <button
-      className={`${style} w-full inline-flex justify-center items-center gap-3 border`}
+      className={`${style} w-full justify-center items-center gap-3 border`}
       onClick={clickFunc}
     >
       <p className="">-------</p>
-      <IoIosArrowDropdown className="ml-" />
+      <IoIosArrowDown className="ml-" />
     </button>
   );
 };

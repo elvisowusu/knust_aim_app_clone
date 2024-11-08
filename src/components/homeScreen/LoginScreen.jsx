@@ -1,9 +1,28 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import knustLogo from "/src/assets/knust logo.png";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { LoginCredentials } from "../../utils/LoginCredentials";
 
 export const LoginScreen = () => {
+  const schema = yup.object().shape({
+    fullName: yup.string().required("Please enter full name"),
+    password: yup.string().required("Please enter password"),
+    studentId: yup.string().required('Please enter Student Id'),
+  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   const [visibleFields, setVisibleFields] = useState({});
 
   const togglePasswordVisibility = (fieldId) => {
@@ -12,6 +31,7 @@ export const LoginScreen = () => {
       [fieldId]: !prev[fieldId],
     }));
   };
+
   return (
     <div className="flex flex-col items-center lg:w-[50%] lg:h-[100%] lg:px-7">
       <img
@@ -22,7 +42,11 @@ export const LoginScreen = () => {
       <p className="text-aimDeepGreen my-[1.2rem] font-medium text-[1.2rem] lg:text-[1.1rem]">
         Login
       </p>
-      <form className="flex flex-col items-start w-full px-[1.5rem]" action="">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col items-start w-full px-[1.5rem]"
+        action=""
+      >
         {LoginCredentials.map(({ id, label, type, placeholder }) => {
           return (
             <>
@@ -44,6 +68,7 @@ export const LoginScreen = () => {
                   name={id}
                   id={id}
                   placeholder={placeholder}
+                  {...register(id)}
                 />
                 {type === "password" && (
                   <button
@@ -55,6 +80,9 @@ export const LoginScreen = () => {
                   </button>
                 )}
               </div>
+              {errors[id] && (
+                <p className="text-xs text-left text-red-500">{errors[id].message}</p>
+              )}
               {label === "Password" && (
                 <p className="text-[0.9rem] text-right w-full text-aimDeepGreen">
                   Forgot password?
@@ -64,7 +92,7 @@ export const LoginScreen = () => {
           );
         })}
         <input
-          className="inputField border-none bg-aimMediumGreen text-white my-[2.5rem] mt-[2.4rem] text-center cursor-pointer hover:bg-[hsl(149,49%,47%)]"
+          className="inputField border-none bg-aimMediumGreen text-white my-[2.5rem] mt-[2.4rem] text-center cursor-pointer hover:bg-[#10a75b] active:bg-[#0f9e56]"
           type="submit"
           value="Log In"
         />

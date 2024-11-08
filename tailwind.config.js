@@ -12,8 +12,8 @@ export default {
       },
       colors: {
         aimLightGreen: `#dbf2e2`,
-        aimMediumGreen: `#13c66b`,
-        aimDeepGreen: `#007527`,
+        aimMediumGreen: `#13c56b`,
+        aimDeepGreen: `#007427`,
         aimDeepRed:`#770600`,
       },
       backgroundImage: {
