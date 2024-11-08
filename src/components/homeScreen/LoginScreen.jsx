@@ -8,19 +8,21 @@ import { LoginCredentials } from "../../utils/LoginCredentials";
 
 export const LoginScreen = () => {
   const schema = yup.object().shape({
-    fullName: yup.string().required("Please enter full name"),
-    password: yup.string().required("Please enter password"),
-    studentId: yup.string().required('Please enter Student Id'),
+    username: yup.string().required("Please enter a username"),
+    password: yup.string().required("Please enter a password"),
+    studentId: yup.string().required('Please enter a student ID'),
   });
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm({
     resolver: yupResolver(schema),
   });
   const onSubmit = (data) => {
     console.log(data);
+    reset();
   };
 
   const [visibleFields, setVisibleFields] = useState({});
@@ -33,13 +35,13 @@ export const LoginScreen = () => {
   };
 
   return (
-    <div className="flex flex-col items-center lg:w-[50%] lg:h-[100%] lg:px-7">
+    <div className="font-Rubik flex flex-col items-center lg:w-[50%] lg:h-[100%] lg:px-7">
       <img
         className="h-[4.6rem] mt-5 lg:mt-11 lg:h-[4.5rem]"
         src={knustLogo}
         alt=""
       />
-      <p className="text-aimDeepGreen my-[1.2rem] font-medium text-[1.2rem] lg:text-[1.1rem]">
+      <p className="text-aimDeepGreen my-[1.2rem] text-[1.2rem] lg:text-[1.1rem]">
         Login
       </p>
       <form
@@ -80,13 +82,13 @@ export const LoginScreen = () => {
                   </button>
                 )}
               </div>
-              {errors[id] && (
-                <p className="text-xs text-left text-red-500">{errors[id].message}</p>
-              )}
               {label === "Password" && (
                 <p className="text-[0.9rem] text-right w-full text-aimDeepGreen">
                   Forgot password?
                 </p>
+              )}
+              {errors[id] && (
+                <p className="text-xs text-left text-red-500 mb-1">{errors[id].message}</p>
               )}
             </>
           );
@@ -97,7 +99,7 @@ export const LoginScreen = () => {
           value="Log In"
         />
       </form>
-      <p className="text-sm mb-[2.5rem] sm:mb-[1.9rem]">
+      <p className="text-sm w-[85%] mb-[1.9rem]">
         Having issues accessing your portal?{" "}
         <span className="underline text-aimDeepGreen font-medium">
           Create a ticket
