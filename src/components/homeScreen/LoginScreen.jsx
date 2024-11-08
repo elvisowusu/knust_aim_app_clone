@@ -5,8 +5,10 @@ import * as yup from "yup";
 import knustLogo from "/src/assets/knust logo.png";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { LoginCredentials } from "../../utils/LoginCredentials";
+import { useNavigate } from 'react-router-dom';
 
 export const LoginScreen = () => {
+  const navigate = useNavigate();
   const schema = yup.object().shape({
     username: yup.string().required("Please enter a username"),
     password: yup.string().required("Please enter a password"),
@@ -23,6 +25,7 @@ export const LoginScreen = () => {
   const onSubmit = (data) => {
     console.log(data);
     reset();
+    navigate('/dashboard');
   };
 
   const [visibleFields, setVisibleFields] = useState({});
