@@ -27,7 +27,7 @@
     h1,
     h2,
     h3 {
-        @apply font-semibold font-Montserrat;
+        @apply text-[#495057] font-semibold font-Montserrat;
     }
 
     p{

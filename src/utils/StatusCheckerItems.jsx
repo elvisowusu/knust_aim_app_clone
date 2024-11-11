@@ -44,6 +44,7 @@ export const StatusCheckerItems = {
         "You have already assessed your lecturers for semester 2 of 2023/2024 Academic Year. Thank you for your feedback!",
       incomplete:
         "You have not assessed your lecturers for semester 2 of 2023/2024 Academic Year",
+      button:'Assess Lecturers'
     },
   },
   "Tag Status": {

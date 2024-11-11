@@ -7,7 +7,7 @@ export const Layout = ({ mainHeadText, mainContent, mainBtn, style }) => {
       className={`pb-[1.2rem] ${style} bg-white md:w-[83%] rounded-[0.3rem] shadow-sm flex flex-col items-center`}
     >
       <section className="flex flex-col border-b-2 border-[#d9f1e1] rounded-b-[13rem_15%] justify-center items-center bg-[#D9F1E1] w-full h-[8.7rem] sm:h-[7.8rem]">
-        <h1 className="text-[#504e51] text-center leading-[1.6rem] text-[1.4rem] md:text-[1.6rem] px-6">
+        <h1 className="text-center leading-[1.6rem] text-[1.4rem] md:text-[1.6rem] px-6">
           {mainHeadText}
         </h1>
       </section>
