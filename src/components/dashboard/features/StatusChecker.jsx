@@ -47,9 +47,9 @@ const StatusItem = ({ heading, status }) => {
         } rounded-b-md`}
       >
         <p>{StatusCheckerItems[heading].description[status]}</p>
-        <section className="flex justify-end items-end mt-[0.6rem]">
+        <section className="flex justify-end items-end mt-[2rem]">
           {status === "incomplete" && (
-            <button className="flex justify-center items-center text-[#13c56b] text-sm">
+            <button className="flex justify-center items-center text-[#13c56b] text-sm ">
               {StatusCheckerItems[heading].description.button}{" "}
               <IoMdArrowForward className="text-[#004E1A]" />
             </button>

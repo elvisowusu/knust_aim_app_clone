@@ -1,5 +1,5 @@
 export const StatusCheckerItems = {
-  "Fees Status": {
+  "Fees status": {
     status: "complete",
     description: {
       complete:
@@ -8,46 +8,46 @@ export const StatusCheckerItems = {
         "You have outstanding fees for semester of 2023/2024 Academic Year",
     },
   },
-  "Biometric Verification Status": {
+  "Biometric verification status": {
     status: "incomplete",
     description: {
       complete:
         "You have been biometrically verified for semester 2 of 2023/2024 Academic Year",
       incomplete:
         "You have not been biometrically verified for semester 2 of 2023/2024 Academic Year",
-      button:'Verify now'
+      button: "Verify now",
     },
   },
-  "Course Registration Status": {
+  "Course registration status": {
     status: "incomplete",
     description: {
       complete:
         "You have registered your courses for semester 2 of 2023/2024 Academic Year. Enjoy your courses!",
       incomplete:
         "You have not registered your courses for semester 2 of 2023/2024 Academic Year",
-      button:"Register Academic Courses"
+      button: "Register Academic Courses",
     },
   },
-  "Trail Status": {
+  "Trail status": {
     status: "complete",
     description: {
       complete:
         "You do not have any trail courses for semester 2 of 2023/2024 Academic Year",
       incomplete:
         "You have trail courses for semester 2 of 2023/2024 Academic Year",
-    }
+    },
   },
-  "Lecturer Assessment Status": {
+  "Lecturer assessment status": {
     status: "complete",
     description: {
       complete:
         "You have already assessed your lecturers for semester 2 of 2023/2024 Academic Year. Thank you for your feedback!",
       incomplete:
         "You have not assessed your lecturers for semester 2 of 2023/2024 Academic Year",
-      button:'Assess Lecturers'
+      button: "Assess Lecturers",
     },
   },
-  "Tag Status": {
+  "Tag status": {
     status: "complete",
     description: {
       complete:
@@ -57,4 +57,3 @@ export const StatusCheckerItems = {
     },
   },
 };
-

@@ -18,6 +18,21 @@
     .grids {
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-6;
     }
+    .layoutBody{
+        @apply pb-[1.2rem] bg-white md:w-[83%] rounded-[0.3rem] shadow-sm flex flex-col items-center;
+    }
+    .layoutHeaderSection{
+        @apply flex flex-col border-b-2 border-[#d9f1e1] rounded-b-[13rem_15%] justify-center items-center bg-[#D9F1E1] w-full h-[8.8rem] sm:h-[7.8rem];
+    }
+    .layoutHeader{
+        @apply text-center leading-[1.6rem] text-[1.4rem] md:text-[1.6rem] px-6;
+    }
+    .layoutHr{
+        @apply bg-[#d9f1e1] border-none h-[0.2rem] sm:h-[0.04rem] md:h-[0.01rem] mt-[0.2rem] w-full ;
+    }
+    .layoutBase{
+        @apply flex flex-col sm:flex-row lg:flex-row gap-[0.2rem] justify-center  w-full items-center h-[4rem] text-center ;
+    }
 }
 
 
