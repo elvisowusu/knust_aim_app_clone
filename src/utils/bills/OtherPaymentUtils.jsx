@@ -1,56 +1,79 @@
 export const OtherPaymentUtils = () => {
   const otherPaymentsData = [
     {
-      type: "Library Fees",
-      dueDate: "2024-03-30",
-      amount: 50.0,
-      status: "Pending",
-    },
-    {
-      type: "Student ID Card",
-      dueDate: "2024-02-15",
-      amount: 25.0,
-      status: "Paid",
+      AcademicYear: {
+        year: "2020/2021",
+        semester: "First Semester",
+        acdYr: "Year 1",
+      },
+      Type: "PAYMENT",
+      Narrative: "ONLINE: Paystack Payment for GRADUATION for 20724143 - WP",
+      Amount: 450,
+      Balance: 450.0,
+      Date: "21 Nov 2024",
+      Action: "",
     },
   ];
+  const tableHeading = [
+    "Academic Year",
+    "Type",
+    "Narrative",
+    "Amount(GHS)",
+    "Balance(GHS)",
+    "Date",
+    "Action",
+  ];
   return (
-    <div id="otherPayments" className="mb-[5.5rem]">
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
+    <div id="otherPayments" className="mb-[5.5rem] min-h-[14.7rem]">
+      <div className="overflow-x-auto text-sm font-Rubik font-normal">
+        <table className="w-full border">
           <thead className="bg-gray-50">
             <tr>
-              <th className="text-left px-4 py-3 border-b">Payment Type</th>
-              <th className="text-left px-4 py-3 border-b">Due Date</th>
-              <th className="text-right px-4 py-3 border-b">Amount(GH¢)</th>
-              <th className="text-left px-4 py-3 border-b">Status</th>
+              {tableHeading.map((items, index) => {
+                return (
+                  <th key={index} className="text-left px-4 py-3 border">
+                    {items}
+                  </th>
+                );
+              })}
             </tr>
           </thead>
           <tbody>
-            {otherPaymentsData.map((payment, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-3">{payment.type}</td>
-                <td className="px-4 py-3">
-                  {new Date(payment.dueDate).toLocaleDateString()}
-                </td>
-                <td className="text-right px-4 py-3">
-                  {payment.amount.toFixed(2)}
-                </td>
-                <td className="px-4 py-3">
-                  <span
-                    className={`px-2 py-1 rounded-full text-sm ${
-                      payment.status === "Paid"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-yellow-100 text-yellow-800"
-                    }`}
-                  >
-                    {payment.status}
-                  </span>
-                </td>
-              </tr>
-            ))}
+            {otherPaymentsData.map(
+              (
+                {
+                  AcademicYear,
+                  Type,
+                  Narrative,
+                  Amount,
+                  Balance,
+                  Date,
+                  Action,
+                },
+                index
+              ) => (
+                <tr key={index} className="border-b">
+                  <td className="text-left px-4 py-3 border">
+                    <span>{AcademicYear.year}</span> |
+                    <span> {AcademicYear.semester}</span>
+                    <span>{AcademicYear.acdYr}</span>
+                  </td>
+                  <td className="text-left px-4 py-3 border">{Type}</td>
+                  <td className="text-left px-4 py-3 border">{Narrative}</td>
+                  <td className="text-right px-4 py-3 border">
+                    {Amount.toFixed(2)}
+                  </td>
+                  <td className="text-right px-4 py-3 border">
+                    {Balance.toFixed(2)}
+                  </td>
+                  <td className="text-left px-4 py-3 border">{Date}</td>
+                  <td>{Action}</td>
+                </tr>
+              )
+            )}
           </tbody>
         </table>
-      </div>
+      </div>{" "}
     </div>
   );
 };

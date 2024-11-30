@@ -16,7 +16,7 @@ export const BillUtils = () => {
   return (
     <div
       id="bills"
-      className=" text-center mt-[3.2rem] sm:mt-[2.3rem] mb-[5.5rem]"
+      className=" text-center mt-[3.2rem] sm:mt-[2.3rem] mb-[5.5rem] min-h-[14.7rem]"
     >
       <h2 className="font-medium leading-4 mb-[1rem]">
         Fee Schedule for 2023/2024 Academic Year

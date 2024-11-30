@@ -51,14 +51,14 @@ export const TransactionUtils = () => {
     "Action",
   ];
   return (
-    <div id="transactions" className="mb-[5.5rem]">
-      <div className="overflow-x-auto">
-        <table className="w-full">
+    <div id="transactions" className="mb-[5.5rem] min-h-[14.7rem]">
+      <div className="overflow-x-auto text-sm font-Rubik font-normal">
+        <table className="w-full border">
           <thead className="bg-gray-50">
             <tr>
               {tableHeading.map((items, index) => {
                 return (
-                  <th key={index} className="text-left px-4 py-3 border-b">
+                  <th key={index} className="text-left px-4 py-3 border">
                     {items}
                   </th>
                 );
@@ -80,17 +80,17 @@ export const TransactionUtils = () => {
                 index
               ) => (
                 <tr key={index} className="border-b">
-                  <td>
+                  <td className="text-left px-4 py-3 border">
                     <span>{AcademicYear.year}</span> |
                     <span> {AcademicYear.semester}</span>
                     <span>{AcademicYear.acdYr}</span>
                   </td>
-                  <td>{Type}</td>
-                  <td className="px-4 py-3">{Date}</td>
-                  <td className="px-4 py-3">{Narrative}</td>
-                  <td className="text-right px-4 py-3">{Amount.toFixed(2)}</td>
-                  <td className="text-right px-4 py-3">{Balance.toFixed(2)}</td>
-                  <td>{Action}</td>
+                  <td className="text-left px-4 py-3 border">{Type}</td>
+                  <td className="text-left px-4 py-3 border">{Narrative}</td>
+                  <td className="text-right px-4 py-3 border">{Amount.toFixed(2)}</td>
+                  <td className="text-right px-4 py-3 border">{Balance.toFixed(2)}</td>
+                  <td className="text-left px-4 py-3 border">{Date}</td>
+                  <td >{Action}</td>
                 </tr>
               )
             )}

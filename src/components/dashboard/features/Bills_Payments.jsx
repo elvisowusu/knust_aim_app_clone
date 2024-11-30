@@ -12,7 +12,7 @@ export const Bills_Payments = () => {
       mainHeadText="BILLS AND PAYMENTS"
       headerStyle={"h-[7.3rem]"}
       mainBtn={<Btn name="Download Bill" />}
-      style={"w-[99%]"}
+      style={"w-[99%] md:w-[80%]"}
       mainContent={
         <div className="w-full px-[1rem]">
           {/* Tab Buttons */}
