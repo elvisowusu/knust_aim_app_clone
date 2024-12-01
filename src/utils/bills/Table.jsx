@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export const Table = ({ headers, data }) => (
   <table className="w-full border">
     <thead className="bg-gray-50">
@@ -7,7 +8,7 @@ export const Table = ({ headers, data }) => (
             key={index}
             className={`border-b px-4 py-3 ${index === 0 ? "text-left" : "text-right"}`}
           >
-            {header} 
+            {header}
           </th>
         ))}
       </tr>
@@ -28,3 +29,15 @@ export const Table = ({ headers, data }) => (
     </tbody>
   </table>
 );
+// Prop Type Validation
+Table.propTypes = {
+  headers: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node])
+  ).isRequired,
+
+  data: PropTypes.arrayOf(
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node])
+    )
+  ).isRequired,
+};
