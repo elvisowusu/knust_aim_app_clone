@@ -36,7 +36,7 @@ export const Bills_Payments = () => {
 
           {/* Tab Content */}
           <div className="mt-4">
-            {tabs.find((tab) => tab.name === activeTab)?.tab}
+            {tabs.find(tab => tab.name === activeTab)?.tab}
           </div>
         </div>
       }

@@ -1,46 +1,60 @@
 import { jsPDF } from "jspdf";
 
 /**
- * Generates and downloads a PDF.
- * @param {string} title - The title of the PDF.
- * @param {Array} feeData - Array of fee items with "item" and "amount" properties.
- * @param {Array} summaryData - Array of summary items with "label" and "amount" properties.
- * @param {string} fileName - The name of the file to be downloaded (default: "Document.pdf").
+ * Generates and downloads a PDF with flexible content generation
+ * @param {Object} options - Configuration options for PDF generation
+ * @param {string} options.title - The title of the PDF
+ * @param {string} [options.fileName='Document.pdf'] - The name of the file to be downloaded
+ * @param {Array} [options.sections=[]] - Array of sections to be added to the PDF
  */
-export const generatePDF = (title, feeData, summaryData, fileName = "Document.pdf") => {
+export const generateUniversalPDF = (options) => {
   try {
+    const {
+      title = "Document",
+      fileName = "Document.pdf",
+      sections = []
+    } = options;
+
     const doc = new jsPDF();
+    let yPosition = 20;
 
     // Add Title
     doc.setFontSize(18);
-    doc.text(title, 20, 20);
+    doc.text(title, 20, yPosition);
+    yPosition += 15;
 
-    // Add Fee Data
-    let yPosition = 30;
-    if (feeData && feeData.length > 0) {
-      doc.setFontSize(12);
-      doc.text("Fee Details", 20, yPosition);
-      yPosition += 10;
+    // Render sections
+    sections.forEach((section) => {
+      // Section Title
+      if (section.sectionTitle) {
+        doc.setFontSize(14);
+        doc.text(section.sectionTitle, 20, yPosition);
+        yPosition += 10;
+      }
 
-      feeData.forEach((fee) => {
-        doc.text(fee.item, 20, yPosition);
-        doc.text(`GH¢ ${fee.amount.toFixed(2)}`, 150, yPosition, { align: "right" });
-        yPosition += 8;
-      });
-    }
+      // Table-like data
+      if (section.data && section.data.length > 0) {
+        doc.setFontSize(10);
+        
+        section.data.forEach((row) => {
+          // If row is an array, assume it's a table-like format
+          if (Array.isArray(row)) {
+            doc.text(row[0], 20, yPosition);
+            doc.text(row[1], 150, yPosition, { align: "right" });
+          } 
+          // If row is an object, handle object format
+          else if (typeof row === 'object') {
+            doc.text(row.item || row.label || '', 20, yPosition);
+            doc.text(`GH¢ ${row.amount.toFixed(2)}`, 150, yPosition, { align: "right" });
+          }
+          
+          yPosition += 8;
+        });
 
-    // Add Summary Data
-    if (summaryData && summaryData.length > 0) {
-      yPosition += 10;
-      doc.text("Summary", 20, yPosition);
-      yPosition += 10;
-
-      summaryData.forEach((summary) => {
-        doc.text(summary.label, 20, yPosition);
-        doc.text(`GH¢ ${summary.amount.toFixed(2)}`, 150, yPosition, { align: "right" });
-        yPosition += 8;
-      });
-    }
+        // Add some spacing between sections
+        yPosition += 10;
+      }
+    });
 
     // Save the PDF
     doc.save(fileName);

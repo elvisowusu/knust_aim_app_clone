@@ -34,7 +34,7 @@ export const TransactionUtils = () => {
   ];
 
   return (
-    <div id="transactions" className="mb-[5.5rem] min-h-[14.7rem]">
+    <div id="Transactions" className="mb-[5.5rem] min-h-[14.7rem]">
       <div className="overflow-x-auto text-sm font-Rubik font-normal">
         <Table
           headers={headers}
