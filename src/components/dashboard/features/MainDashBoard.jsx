@@ -1,12 +1,23 @@
 import { DashboardItems } from "../../../utils/DashboardItems";
-
+import { useState } from "react";
+import { GeneralError } from "../../../utils/error/GeneralError";
 export const MainDashBoard = () => {
+  const [errorStatus, setErrorStatus] = useState(false);
+
+  const handleCardClick = (heading) => {
+    if (heading === "Online Class") {
+      window.open("https://myclass.knust.edu.gh/login/index.php", "_blank");
+    } else if (heading === "Option Change") {
+      setErrorStatus(true);
+    }
+  };
   return (
     <div className="grids w-full">
       {DashboardItems.map(({ icon, heading, description, index }) => {
         return (
           <div
             key={index}
+            onClick={() => handleCardClick(heading)}
             className="bg-white h-[15.5rem] cursor-pointer shadow-sm hover:bg-green-50 hover:border hover:border-green-600 p-4 rounded-[0.2rem] "
           >
             <img className="h-[3rem] w-[3rem]" src={icon} alt="" />
@@ -17,6 +28,12 @@ export const MainDashBoard = () => {
           </div>
         );
       })}
+       {errorStatus && (
+        <GeneralError
+          status={errorStatus}
+          setStatus={setErrorStatus}
+        />
+      )}
     </div>
   );
 };
