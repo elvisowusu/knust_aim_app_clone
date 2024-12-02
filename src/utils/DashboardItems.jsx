@@ -10,8 +10,7 @@ import graduationCap from "../assets/icons/graduation cap.png";
 import transcriptRequest from "../assets/icons/receipt.png";
 import alumniDetails from "../assets/icons/graduate.png";
 import studentsGuide from "../assets/icons/code-of-conduct.png";
-
-
+import studentGuidePdf from "../assets/StudentGuide.pdf";
 export const DashboardItems = [
   {
     icon: biometric,
@@ -52,12 +51,15 @@ export const DashboardItems = [
     icon: optionChange,
     heading: "Option Change",
     description: "Module for modifying academic preferences and settings.",
+    action: "showError",
   },
   {
     icon: onlineClass,
     heading: "Virtual Classroom",
     description:
       "Online platform for live interactive teaching with video, audio, chat and screen sharing.",
+      action: "openUrl",
+      url: "https://myclass.knust.edu.gh/login/index.php",
   },
   {
     icon: graduationCap,
@@ -82,5 +84,7 @@ export const DashboardItems = [
     heading: "Students' Guide",
     description:
       "Document outlining rules, standards, and expectations for student behaviour.",
+    action: "download",
+    file: studentGuidePdf,
   },
 ];
