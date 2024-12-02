@@ -39,13 +39,13 @@ export const DashboardItems = [
   },
   {
     icon: appraisal,
-    heading: "Appraisal",
+    heading: "Assess Lecturer",
     description:
       "Provide feedback and rating on lecturers to improve teaching quality.",
   },
   {
     icon: payment,
-    heading: "Payment",
+    heading: "Bill and Payments",
     description: "Manage payments and view bills conveniently.",
   },
   {
@@ -55,7 +55,7 @@ export const DashboardItems = [
   },
   {
     icon: onlineClass,
-    heading: "Online Class",
+    heading: "Virtual Classroom",
     description:
       "Online platform for live interactive teaching with video, audio, chat and screen sharing.",
   },

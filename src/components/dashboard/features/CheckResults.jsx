@@ -23,7 +23,7 @@ export const CheckResults = () => {
             ]}
             value={year}
             onChange={setYear}
-            width={"w-[9rem] pl-[2.5rem]"}
+            width={"w-[9rem] pl-[2rem]"}
           />
           <DropDown
             label="Select Semester"
