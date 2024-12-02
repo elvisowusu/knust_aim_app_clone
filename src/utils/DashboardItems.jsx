@@ -72,6 +72,8 @@ export const DashboardItems = [
     heading: "Transcript Request",
     description:
       "Transcript request module allows students to request official transcripts.",
+      action: "openUrl",
+      url: "https://transcript.knust.edu.gh",
   },
   {
     icon: alumniDetails,
