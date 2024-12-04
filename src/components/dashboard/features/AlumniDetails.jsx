@@ -1,7 +1,7 @@
 import { AlumniItems } from "../../../utils/items/AlumniItems";
 import { Btn, Layout } from "../../../utils/Layout";
 
-export const AlumniDetails = () => {
+const AlumniDetails = () => {
   return (
     <Layout
       mainHeadText="ALUMNI INFORMATION"
@@ -42,3 +42,4 @@ export const AlumniDetails = () => {
     />
   );
 };
+export default AlumniDetails;

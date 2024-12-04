@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Btn, Layout } from "../../../utils/Layout";
 import { DropDown } from "../../../utils/DropDown";
 
-export const RegistrationSlip = () => {
+const RegistrationSlip = () => {
   const [year, setYear] = useState("-------");
   const [semester, setSemester] = useState("-------");
   return (
@@ -45,3 +45,4 @@ export const RegistrationSlip = () => {
     />
   );
 };
+export default RegistrationSlip;

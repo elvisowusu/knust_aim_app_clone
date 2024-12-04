@@ -1,7 +1,7 @@
 import { DashboardItems } from "../../../utils/items/DashboardItems";
 import { useState } from "react";
 import { GeneralError } from "../../../utils/error/GeneralError";
-export const MainDashBoard = () => {
+const MainDashBoard = () => {
   const [errorStatus, setErrorStatus] = useState(false);
 
   const handleCardClick = (item) => {
@@ -48,3 +48,4 @@ export const MainDashBoard = () => {
     </div>
   );
 };
+export default MainDashBoard;

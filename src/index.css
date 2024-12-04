@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 /* Path: src/index.css */
 @tailwind base;
@@ -7,109 +7,95 @@
 @tailwind utilities;
 
 @layer components {
-    .inputField {
-        @apply w-full my-[0.7rem] py-[0.36rem] px-[0.8rem] placeholder:text-sm placeholder:text-[#9c9aa6] rounded-[0.3rem] outline-none border border-[#d6d7d9];
-    }
+  .inputField {
+    @apply w-full my-[0.7rem] py-[0.36rem] px-[0.8rem] placeholder:text-sm placeholder:text-[#9c9aa6] rounded-[0.3rem] outline-none border border-[#d6d7d9];
+  }
 
-    .navIconsOnly {
-        @apply flex justify-center gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer focus:bg-green-100 focus:border-r-[0.25rem] border-green-700 hover:bg-green-100;
-    }
+  .navIconsOnly {
+    @apply flex justify-center gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer hover:bg-green-100;
+  }
 
-    .grids {
-        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-6;
-    }
-    .layoutBody{
-        @apply pb-[1.2rem] bg-white md:w-[83%] rounded-[0.3rem] shadow-sm flex flex-col items-center ;
-    }
-    .layoutHeaderSection{
-        @apply flex flex-col border-b-2 border-[#d9f1e1] rounded-b-[13rem_15%] justify-center items-center bg-[#D9F1E1] w-full h-[8.8rem] sm:h-[7.8rem];
-    }
-    .layoutHeader{
-        @apply text-center w-[19.5rem] sm:w-full leading-[1.6rem] text-[1.4rem] md:text-[1.6rem] px-6;
-    }
-    .layoutHr{
-        @apply bg-[#d9f1e1] border-none h-[0.2rem] sm:h-[0.04rem] md:h-[0.01rem] mt-[0.2rem] w-full ;
-    }
-    .layoutBase{
-        @apply flex flex-col sm:flex-row lg:flex-row gap-[0.2rem] justify-center  w-full items-center h-[4rem] text-center ;
-    }
+  .grids {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-6;
+  }
+  .layoutBody {
+    @apply pb-[1.2rem] bg-white md:w-[83%] rounded-[0.3rem] shadow-sm flex flex-col items-center;
+  }
+  .layoutHeaderSection {
+    @apply flex flex-col border-b-2 border-[#d9f1e1] rounded-b-[13rem_15%] justify-center items-center bg-[#D9F1E1] w-full h-[8.8rem] sm:h-[7.8rem];
+  }
+  .layoutHeader {
+    @apply text-center w-[19.5rem] sm:w-full leading-[1.6rem] text-[1.4rem] md:text-[1.6rem] px-6;
+  }
+  .layoutHr {
+    @apply bg-[#d9f1e1] border-none h-[0.2rem] sm:h-[0.04rem] md:h-[0.01rem] mt-[0.2rem] w-full;
+  }
+  .layoutBase {
+    @apply flex flex-col sm:flex-row lg:flex-row gap-[0.2rem] justify-center  w-full items-center h-[4rem] text-center;
+  }
 }
-
-
 
 @layer base {
+  h1,
+  h2,
+  h3 {
+    @apply text-[#495057] font-semibold font-Montserrat;
+  }
 
-    h1,
-    h2,
-    h3 {
-        @apply text-[#495057] font-semibold font-Montserrat;
-    }
-
-    p{
-        @apply font-Rubik font-normal;
-    }
-    button{
-        @apply font-Rubik;
-    }
+  p {
+    @apply font-Rubik font-normal;
+  }
+  button {
+    @apply font-Rubik;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Base scrollbar styles */
 .scroll-container::-webkit-scrollbar {
-    width: 6px;
-    position: absolute;
-    opacity: 0;
-    /* Hidden by default */
-    transition: opacity 0.3s ease;
+  width: 6px;
+  position: absolute;
+  opacity: 0;
+  /* Hidden by default */
+  transition: opacity 0.3s ease;
 }
 
 /* Track */
 .scroll-container::-webkit-scrollbar-track {
-    background: rgba(241, 241, 241, 0.4);
-    border-radius: 3px;
+  background: rgba(241, 241, 241, 0.4);
+  border-radius: 3px;
 }
 
 /* Handle */
 .scroll-container::-webkit-scrollbar-thumb {
-    background: rgba(200, 198, 198, 0.5);
-    border-radius: 3px;
-    transition: background 0.2s ease;
+  background: rgba(200, 198, 198, 0.5);
+  border-radius: 3px;
+  transition: background 0.2s ease;
 }
 
 /* Handle on hover */
 .scroll-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(163, 161, 161, 0.6);
+  background: rgba(163, 161, 161, 0.6);
 }
 
 /* Show scrollbar when hovering over the container or actively scrolling */
 .scroll-container:hover::-webkit-scrollbar,
 .scroll-container:active::-webkit-scrollbar {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Firefox support */
 .scroll-container {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(200, 198, 198, 0.5) rgba(241, 241, 241, 0.4);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 198, 198, 0.5) rgba(241, 241, 241, 0.4);
 }
 
 /* Hide scrollbar by default for Firefox */
 .scroll-container {
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 /* Show scrollbar on hover/active for Firefox */
 .scroll-container:hover,
 .scroll-container:active {
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }

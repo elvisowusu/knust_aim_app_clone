@@ -2,11 +2,11 @@ import {
   NavigationProvider,
   UseNavigation,
 } from "../../utils/NavigationContext";
-import { DashBody } from "./features/DashBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavBar } from "./NavBar";
 import { Bar } from "./Bar";
+import { Outlet } from "react-router-dom";
 
 export const Dashboard = () => {
   return (
@@ -40,7 +40,9 @@ const MainContent = () => {
       className={`${!isOpen ? "md:ml-[5rem]" : "md:ml-[16rem]"} lg:ml-[16rem]`}
     >
       <Header />
-      <DashBody />
+      <div className="p-6 pt-[6rem] bg-[#f2f6f9] flex flex-col items-center ">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

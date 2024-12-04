@@ -3,7 +3,7 @@ import { StatusCheckerItems } from "../../../utils/items/StatusCheckerItems";
 import { FaCircleCheck } from "react-icons/fa6";
 import { IoMdArrowForward, IoMdCloseCircle } from "react-icons/io";
 import PropTypes from "prop-types";
-export const StatusChecker = () => {
+const StatusChecker = () => {
   return (
     <Layout
       style={"mb-[1.5rem]"}
@@ -25,6 +25,7 @@ export const StatusChecker = () => {
     />
   );
 };
+export default StatusChecker;
 
 const StatusItem = ({ heading, status }) => {
   return (

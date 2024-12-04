@@ -4,7 +4,8 @@ import { BillUtils } from "../../../utils/bills/BillUtils";
 import { TransactionUtils } from "../../../utils/bills/TransactionUtils";
 import { OtherPaymentUtils } from "../../../utils/bills/OtherPaymentUtils";
 
-export const Bills_Payments = () => {
+
+const BillsAndPayments = () => {
   const [activeTab, setActiveTab] = useState("Bill");
   const tabs = [
     { name: "Bill", tab: <BillUtils /> },
@@ -44,3 +45,4 @@ export const Bills_Payments = () => {
     />
   );
 };
+export default BillsAndPayments;

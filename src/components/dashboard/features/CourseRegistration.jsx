@@ -4,7 +4,7 @@ import { Btn, Layout } from "../../../utils/Layout";
 import { useState } from "react";
 
 import { GeneralError } from "../../../utils/error/GeneralError";
-export const CourseRegistration = () => {
+const CourseRegistration = () => {
   const [complete, setComplete] = useState(false);
 
   return (
@@ -50,3 +50,4 @@ export const CourseRegistration = () => {
     />
   );
 };
+export default CourseRegistration;

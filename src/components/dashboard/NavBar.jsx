@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { NavItems, OtherServices } from "../../utils/items/NavItems_Services";
 import brandLogo from "../../assets/brandLogo.png";
 import { UseNavigation } from "../../utils/NavigationContext";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
   const { toggleNav } = UseNavigation();
@@ -49,12 +50,35 @@ const Section = ({ title, items }) => (
   </div>
 );
 
-const NavButton = ({ icon, name }) => (
-  <button className="pl-[2rem] flex gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer focus:bg-green-100 focus:border-r-[0.25rem] border-green-700 hover:bg-green-100">
-    <img src={icon} alt="" />
-    <p className="text-[1rem]">{name}</p>
-  </button>
-);
+const NavButton = ({ icon, name, link }) => {
+  // Check if the link is internal or external
+  const isInternal = link && !link.startsWith("http");
+  return isInternal ? (
+    <NavLink
+      to={link || "#"}
+      end
+      className={({ isActive }) =>
+        `pl-[2rem] flex gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer ${
+          isActive ? "bg-green-100 border-r-[0.25rem] border-green-700" : ""
+        }`
+      }
+    >
+      <img src={icon} alt={`${name} Icon`} />
+      <p className="text-[1rem]">{name}</p>
+    </NavLink>
+  ) : (
+    // External link with a <a> tag for opening in a new tab
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="pl-[2rem] flex gap-2 items-center h-[3rem] w-full hover:text-[#007427] border border-y-0 border-x-0 cursor-pointer"
+    >
+      <img src={icon} alt={`${name} Icon`} />
+      <p className="text-[1rem]">{name}</p>
+    </a>
+  );
+};
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
@@ -62,6 +86,7 @@ Section.propTypes = {
     PropTypes.shape({
       icon: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
+      link: PropTypes.string,
     })
   ).isRequired,
 };
@@ -69,4 +94,5 @@ Section.propTypes = {
 NavButton.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };

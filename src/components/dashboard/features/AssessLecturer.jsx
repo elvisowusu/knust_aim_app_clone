@@ -4,7 +4,7 @@ import { AssessLecturerItems } from "../../../utils/items/AssessLecturerItems";
 import { useState } from "react";
 import { GeneralError } from "../../../utils/error/GeneralError";
 
-export const AssessLecturer = () => {
+const AssessLecturer = () => {
   const [complete, setComplete] = useState(false);
   return (
     <Layout
@@ -48,3 +48,4 @@ export const AssessLecturer = () => {
     />
   );
 };
+export default AssessLecturer;

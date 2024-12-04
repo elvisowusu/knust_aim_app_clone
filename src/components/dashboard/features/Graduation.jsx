@@ -6,7 +6,7 @@ import {
 } from "../../../utils/items/GraduationItems";
 import { Table } from "../../../utils/bills/Table";
 
-export const Graduation = () => {
+const Graduation = () => {
   return (
     <Layout
       mainHeadText="GRADUATION"
@@ -36,3 +36,4 @@ export const Graduation = () => {
     />
   );
 };
+export default Graduation;

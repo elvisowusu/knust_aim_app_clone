@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Btn, Layout } from "../../../utils/Layout";
 import { DropDown } from "../../../utils/DropDown";
 
-export const CheckResults = () => {
+const CheckResults = () => {
   const [year, setYear] = useState("---");
   const [semester, setSemester] = useState("---");
   return (
@@ -45,3 +45,4 @@ export const CheckResults = () => {
     />
   );
 };
+export default CheckResults;
