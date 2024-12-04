@@ -45,7 +45,7 @@ export const Header = () => {
       </button>
       {menu && (
         <div
-          className="fixed right-0 sm:right-3 top-[4rem]"
+          className="fixed right-0 w-full sm:w-[11rem] sm:right-3 top-[4rem]"
           onClick={() => {
             setMenu(!menu);
           }}

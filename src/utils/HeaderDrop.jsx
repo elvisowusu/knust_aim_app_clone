@@ -35,7 +35,7 @@ export const HeaderDrop = () => {
   ];
 
   return (
-    <div className=" bg-white shadow-xl rounded-md w-full sm:w-[11rem] z-50 font-Rubik text-sm py-[1rem]">
+    <div className=" bg-white shadow-xl rounded-md z-50 font-Rubik text-sm py-[1rem]">
       {HeaderItems.map((item, index) => {
         const isInternal = item.link && !item.link.startsWith("http");
         return isInternal ? (
