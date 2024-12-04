@@ -8,7 +8,7 @@ const CheckResults = () => {
   return (
     <Layout
       style={
-        "w-[99%] min-h-[36.7rem] md:w-[82%] h-[32rem] sm:h-[29.7rem] sm:mb-[7.8rem]"
+        "w-[99%] md:w-[82%] h-[32rem] sm:h-[29.7rem] mb-[3rem] sm:mb-[7.8rem]"
       }
       headerStyle={"h-[7.5rem] sm:h-[8.2rem]"}
       mainHeadText="CHECK RESULTS"
