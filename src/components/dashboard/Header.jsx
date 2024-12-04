@@ -3,6 +3,7 @@ import profile from "../../assets/profile.jpg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { UseNavigation } from "../../utils/NavigationContext";
 import { HiMenuAlt2 } from "react-icons/hi";
+import { HeaderDrop } from "../../utils/HeaderDrop";
 
 export const Header = () => {
   const { isOpen, toggleNav } = UseNavigation();
@@ -31,8 +32,11 @@ export const Header = () => {
           src={profile}
           alt=""
         />
-        <p className="hidden xl:block pr-[1.1rem] text-white text-sm">Elvis Owusu</p>
+        <p className="hidden xl:block pr-[1.1rem] text-white text-sm">
+          Elvis Owusu
+        </p>
       </button>
+      <HeaderDrop />
     </header>
   );
 };
