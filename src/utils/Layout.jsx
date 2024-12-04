@@ -13,7 +13,7 @@ export const Layout = ({
   const navigate = useNavigate();
 
   const clickFunc = () => {
-    navigate("/dashboard");
+    navigate("/dashboard", { replace: true });
   };
   return (
     <div className={`${style} layoutBody`}>

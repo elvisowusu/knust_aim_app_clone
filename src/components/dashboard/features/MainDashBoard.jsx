@@ -25,7 +25,6 @@ const MainDashBoard = () => {
         setErrorStatus(true);
         break;
       default:
-        // If no specific action, try to navigate
         if (item.link && item.link.startsWith("/")) {
           navigate(item.link);
         } else {
