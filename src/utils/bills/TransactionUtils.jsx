@@ -31,6 +31,7 @@ export const TransactionUtils = () => {
     "Amount (GHS)",
     "Balance (GHS)",
     "Date",
+    "Action"
   ];
 
   return (

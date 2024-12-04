@@ -21,7 +21,7 @@ export const BillUtils = () => {
       id="bills"
       className="text-center mt-[3.2rem] sm:mt-[2.3rem] mb-[5.5rem] min-h-[14.7rem]"
     >
-      <h2 className="font-medium leading-4 mb-[1rem]">
+      <h2 className="font-medium leading-4 sm:text-[1.05rem]">
         Fee Schedule for 2023/2024 Academic Year
       </h2>
 
@@ -29,12 +29,14 @@ export const BillUtils = () => {
         <div className="overflow-x-auto text-sm font-Rubik font-normal">
           {/* Fee Table */}
           <Table
+            style={'text-right'}
             headers={["Fee Item", "Amount (GH¢)"]}
             data={feeData.map((item) => [item.item, item.amount.toFixed(2)])}
           />
           {/* Summary Table */}
           <Table
-            headers={["", ""]}
+            style={'text-right'}
+            headers={[]}
             data={summaryData.map((item) => [
               item.label,
               item.amount.toFixed(2),
@@ -45,4 +47,3 @@ export const BillUtils = () => {
     </div>
   );
 };
-

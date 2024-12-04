@@ -1,16 +1,16 @@
-import biometric from "../assets/icons/biometric.png";
-import courseRegistration from "../assets/icons/courseRegistration.png";
-import registrationSlip from "../assets/icons/registration slip.png";
-import checkResults from "../assets/icons/vector.png";
-import appraisal from "../assets/icons/appraisal.png";
-import payment from "../assets/icons/payment.png";
-import optionChange from "../assets/icons/change.png";
-import onlineClass from "../assets/icons/online class.png";
-import graduationCap from "../assets/icons/graduation cap.png";
-import transcriptRequest from "../assets/icons/receipt.png";
-import alumniDetails from "../assets/icons/graduate.png";
-import studentsGuide from "../assets/icons/code-of-conduct.png";
-import studentGuidePdf from "../assets/StudentGuide.pdf";
+import biometric from "../../assets/icons/biometric.png";
+import courseRegistration from "../../assets/icons/courseRegistration.png";
+import registrationSlip from "../../assets/icons/registration slip.png";
+import checkResults from "../../assets/icons/vector.png";
+import appraisal from "../../assets/icons/appraisal.png";
+import payment from "../../assets/icons/payment.png";
+import optionChange from "../../assets/icons/change.png";
+import onlineClass from "../../assets/icons/online class.png";
+import graduationCap from "../../assets/icons/graduation cap.png";
+import transcriptRequest from "../../assets/icons/receipt.png";
+import alumniDetails from "../../assets/icons/graduate.png";
+import studentsGuide from "../../assets/icons/code-of-conduct.png";
+import studentGuidePdf from "../../assets/StudentGuide.pdf";
 export const DashboardItems = [
   {
     icon: biometric,

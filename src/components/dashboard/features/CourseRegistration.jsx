@@ -1,4 +1,4 @@
-import { CourseRegistrationItems } from "../../../utils/CourseRegistrationItems";
+import { CourseRegistrationItems } from "../../../utils/items/CourseRegistrationItems";
 import { FiCheckCircle } from "react-icons/fi";
 import { Btn, Layout } from "../../../utils/Layout";
 import { useState } from "react";

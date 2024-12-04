@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { NavItems, OtherServices } from "../../utils/NavItems_Services";
+import { NavItems, OtherServices } from "../../utils/items/NavItems_Services";
 import brandLogo from "../../assets/brandLogo.png";
 import { UseNavigation } from "../../utils/NavigationContext";
 
@@ -22,11 +22,11 @@ export const NavBar = () => {
 };
 
 const NavigationSection = () => (
-  <div className="mb-[5rem]">
+  <div className="">
     <img
       src={brandLogo}
       alt=""
-      className="fixed hidden md:block h-[4.4rem] w-[16rem] pr-[0.05rem] bg-white"
+      className="fixed md:block h-[4.4rem] w-[16rem] pr-[0.05rem] bg-white"
     />
     <Section title="NAVIGATION" items={NavItems} />
   </div>
@@ -39,7 +39,7 @@ const ServicesSection = () => (
 );
 
 const Section = ({ title, items }) => (
-  <div className="">
+  <div className="mt-[5rem]">
     <h1 className="text-[0.7rem] mb-[0.9rem] pl-[1.5rem] font-semibold text-[#9ea9ad]">
       {title}
     </h1>

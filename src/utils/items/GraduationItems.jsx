@@ -24,3 +24,12 @@ export const GraduationItems = [
       "Please contact your exams officer at your department if you have any issue with this.",
   },
 ];
+
+export const GraduateDetails = [
+  { name: "Student ID", detail: 20724143 },
+  { name: "Index No:", detail: 5310420 },
+  { name: "Name:", detail: "Elvis Gyasi Owusu" },
+  { name: "Programme Name:", detail: "Bachelor of Science (COMPUTER SCIENCE)" },
+  { name: "Specialization:", detail: null },
+  { name: "Effective Date:", detail: "11/1/2024" },
+];

@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { Btn, Layout } from "../../../utils/Layout";
-import { AssessLecturerItems } from "../../../utils/AssessLecturerItems";
+import { AssessLecturerItems } from "../../../utils/items/AssessLecturerItems";
 import { useState } from "react";
 import { GeneralError } from "../../../utils/error/GeneralError";
 

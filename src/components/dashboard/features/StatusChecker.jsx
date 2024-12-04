@@ -1,5 +1,5 @@
 import { Layout } from "../../../utils/Layout";
-import { StatusCheckerItems } from "../../../utils/StatusCheckerItems";
+import { StatusCheckerItems } from "../../../utils/items/StatusCheckerItems";
 import { FaCircleCheck } from "react-icons/fa6";
 import { IoMdArrowForward, IoMdCloseCircle } from "react-icons/io";
 import PropTypes from "prop-types";
