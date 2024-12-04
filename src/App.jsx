@@ -8,10 +8,12 @@ import {
   MainDashBoard,
   RegistrationSlip,
   StatusChecker,
+  StudentProfile,
+  ManageDevices,
+  HomeScreen,
+  Dashboard,
 } from "./components/dashboard/features";
 
-import { Dashboard } from "./components/dashboard/Dashboard";
-import HomeScreen from "./components/homeScreen/HomeScreen";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
           <Route path="BillsAndPayments" element={<BillsAndPayments />} />
           <Route path="Graduation" element={<Graduation />} />
           <Route path="AlumniDetails" element={<AlumniDetails />} />
+          <Route path="StudentProfile" element={<StudentProfile />} />
+          <Route path="ManageDevices" element={<ManageDevices />} />
         </Route>
       </Routes>
     </Router>

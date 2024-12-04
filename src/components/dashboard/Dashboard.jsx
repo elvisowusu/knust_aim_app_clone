@@ -8,7 +8,7 @@ import { NavBar } from "./NavBar";
 import { Bar } from "./Bar";
 import { Outlet } from "react-router-dom";
 
-export const Dashboard = () => {
+const Dashboard = () => {
   return (
     <NavigationProvider>
       <div className="h-[100vh] overflow-x-clip">
@@ -18,7 +18,7 @@ export const Dashboard = () => {
     </NavigationProvider>
   );
 };
-
+export default Dashboard;
 const Navigation = () => {
   const { isOpen } = UseNavigation();
 
