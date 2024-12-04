@@ -36,7 +36,7 @@ export const Header = () => {
           Elvis Owusu
         </p>
       </button>
-      <HeaderDrop />
+      {/* <HeaderDrop /> */}
     </header>
   );
 };
