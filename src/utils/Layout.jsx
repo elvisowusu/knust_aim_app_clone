@@ -1,5 +1,6 @@
 import { FaArrowLeftLong } from "react-icons/fa6";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 export const Layout = ({
   mainHeadText,
@@ -9,6 +10,11 @@ export const Layout = ({
   baseStyle,
   headerStyle,
 }) => {
+  const navigate = useNavigate();
+
+  const clickFunc = () => {
+    navigate("/dashboard");
+  };
   return (
     <div className={`${style} layoutBody`}>
       <section className={`${headerStyle} layoutHeaderSection`}>
@@ -17,7 +23,10 @@ export const Layout = ({
       <hr className="layoutHr" />
       <>{mainContent}</>
       <div className={`${baseStyle} layoutBase`}>
-        <button className="border text-red-400 hover:text-white hover:bg-red-400 hover:border-none ease-out transition-all 3s w-fit text-sm py-[0.55rem] px-3 rounded-[0.3rem] border-red-400 flex justify-center items-center">
+        <button
+          onClick={clickFunc}
+          className="border text-red-400 hover:text-white hover:bg-red-400 hover:border-none ease-out transition-all 3s w-fit text-sm py-[0.55rem] px-3 rounded-[0.3rem] border-red-400 flex justify-center items-center"
+        >
           <FaArrowLeftLong size={11} />
           Back to Main Menu
         </button>
