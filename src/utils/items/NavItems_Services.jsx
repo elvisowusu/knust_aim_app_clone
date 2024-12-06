@@ -14,7 +14,7 @@ export const NavItems = [
   {
     icon: statusChecker,
     name: "Status Checker",
-    link: "/dashboard/StatusChecker",
+    link: "/dashboard/mainStatusChecker",
   },
   {
     icon: courseReg,
